@@ -44,7 +44,7 @@ void setup() {
 void loop() {
   //避障優先
   long distance = getDistance();
-  if (distance > 0 && distance < 20) {
+  if (distance > 0 && distance < 15) {
     STOP();         // 停止車子
     delay(200);
     BACKWORD();     // 後退 0.5 秒
@@ -137,11 +137,11 @@ void STOP() {
 }
 void BACKWORD() {
   //後退
-  digitalWrite(IN1, HIGH);
+  digitalWrite(IN1, LOW);
   digitalWrite(IN2, LOW);
   digitalWrite(IN3, HIGH);
   digitalWrite(IN4, LOW);
-  analogWrite(ENA, 100);
+  analogWrite(ENA, 0);
   analogWrite(ENB, 200);
 }
 long getDistance() {
