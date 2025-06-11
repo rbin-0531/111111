@@ -142,7 +142,7 @@ void BACKWORD() {
   digitalWrite(IN3, HIGH);
   digitalWrite(IN4, LOW);
   analogWrite(ENA, 100);
-  analogWrite(ENB, 100);
+  analogWrite(ENB, 200);
 }
 long getDistance() {
   digitalWrite(TR, LOW);
